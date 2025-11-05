@@ -39,7 +39,7 @@
   font-style: italic;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1163px) {
   .container {
     grid-template-columns: 1fr;
   }
