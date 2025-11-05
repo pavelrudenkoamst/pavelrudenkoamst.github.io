@@ -1,0 +1,73 @@
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.button {
+  padding: 0.875rem 2rem;
+  background: linear-gradient(45deg, rgb(255, 132, 27) 0%, rgb(255, 0, 7) 50%, rgb(230, 39, 248) 100%);
+  color: white;
+  border: 2px solid rgb(255, 132, 27);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 200px;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: width 0.1s linear;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.button:hover:not(:disabled) {
+  background: linear-gradient(45deg, rgb(230, 39, 248) 0%, rgb(255, 0, 7) 50%, rgb(255, 132, 27) 100%);
+  border: 2px solid rgb(230, 39, 248);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
